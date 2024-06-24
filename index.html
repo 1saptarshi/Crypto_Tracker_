@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Tracker</title>
+  <link rel="stylesheet" href="Style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <div class="container mx-auto p-4">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-3xl font-bold text-center">Crypto Tracker</h1>
+      <button id="dark-mode-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+        <i id="dark-mode-icon" class="fas fa-moon"></i>
+      </button>
+    </div>
+    <input type="text" id="search-input" class="w-full p-2 mb-4 border rounded" placeholder="Search for a cryptocurrency...">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="crypto-container">
+      <!-- Crypto cards will be appended here -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="crypto-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white p-4 rounded-lg shadow-lg w-11/12 sm:w-3/4 lg:w-1/2">
+      <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-900">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="modal-content">
+        <!-- Detailed information will be populated here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+</html>
